@@ -8,7 +8,7 @@ public class HelloWorld
 	{
 		
 		int i;
-		float cal, suma = 0;
+		float val, suma = 0;
 		int m [] = new int[10];
 		float media;
 		double v=0.0;
@@ -20,15 +20,15 @@ public class HelloWorld
 		
 		System.out.println("");
 		System.out.println("Media aritmética");
-		System.out.println("Deme el numero de calificaciones a recibir");
+		System.out.println("Deme el numero de valores a recibir");
 		int n=cold.nextInt();
 		
 		
 		for (i = 0;i < n ; i++)
 		{
-			System.out.println("Deme la calificación " +(i+1));
-			cal = cold.nextInt();
-			suma=suma + cal;
+			System.out.println("Deme el valor " +(i+1));
+			val = cold.nextInt();
+			suma=suma + val;
 			
 		}
 		
@@ -37,12 +37,12 @@ public class HelloWorld
 		System.out.println("La media aritmética es: " + media);
 		
 		
-		for(i = 1 ; i<=6; i++)
+		for(i = 1 ; i<=n; i++)
 		{
 			rango = Math.pow(m[i] - media,2f);
 			v = v + rango;
 		}
-			  v = v / 6f;
+			  v = v / n;
 		
 		d = Math.sqrt(v);
 		System.out.println("La media es: " + media);
